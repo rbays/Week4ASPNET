@@ -1,0 +1,34 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-fixed-top {
+    background-image: url('../Images/pokemonLogo.png');
+    background-size:contain;
+    background-position:right;
+    background-repeat:no-repeat;
+}
+
+.field-validation-error{
+    background-color:#f00;
+}
+
+.input-validation-error{
+    color: #f00;
+    border:1px solid #f00;
+    background-color: #faa;
+}
