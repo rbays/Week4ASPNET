@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #f6b;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -31,4 +32,11 @@ textarea {
     color: #f00;
     border:1px solid #f00;
     background-color: #faa;
+}
+
+.btn {
+    background-color:#B29;
+    border-color:#d3a;
+    box-shadow:rgba(0,0,0,0.6) 1px 1px 2px 2px;
+    color:#4fa;
 }
