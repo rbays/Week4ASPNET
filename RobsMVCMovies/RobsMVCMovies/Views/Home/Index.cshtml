@@ -1,0 +1,50 @@
+﻿@* Use IEnumerable so that you can use a foreach loop*@
+@model IEnumerable<RobsMVCMovies.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    tr td{
+        border:1px solid black;
+        padding:4px;
+    }
+    th{
+        padding:4px;
+        border-right:solid black 1px;
+    }
+    table{
+        box-shadow:rgba(0,0,0,0.5) 2px 2px 2px 2px;
+        border: 1px solid black;
+    }
+</style>
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Title)</th>
+        <th>@Html.DisplayNameFor(model => model.ReleaseDate)</th>
+        <th>@Html.DisplayNameFor(model => model.Genre)</th>
+        <th>@Html.DisplayNameFor(model => model.Price)</th>
+        <th></th>
+        
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+            <td>@Html.DisplayFor(modelItem => item.ReleaseDate.Value.Year)</td>
+            <td>@Html.DisplayFor(modelItem => item.Genre)</td>
+            <td>£@Html.DisplayFor(modelItem => item.Price)</td>
+            <td>
+                @Html.ActionLink("Edit","Edit", new {  Id=item.Id})
+                @Html.ActionLink("Details", "Details", new { Id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { Id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
