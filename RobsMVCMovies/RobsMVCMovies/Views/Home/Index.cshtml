@@ -22,6 +22,16 @@
 
 <h2>Index</h2>
 
+<p>@Html.ActionLink("Create New Record","Create")</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Genre: @Html.DropDownList("movieGenre", "All")
+        Title: @Html.TextBox("SearchString")
+        <input class="btn btn-default"type="submit" value="Filter" />
+    </p>
+}
 <table>
     <tr>
         <th>@Html.DisplayNameFor(model => model.Title)</th>
